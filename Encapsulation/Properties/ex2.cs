@@ -19,7 +19,7 @@ namespace Encapsulation.Properties
         }
         public void withdraw(double amount,int enteredpin)
         {
-            if (amount <= 0 && pin == enteredpin)
+            if (amount <= balance  && pin == enteredpin)
             {
                 balance -= amount;
             }
