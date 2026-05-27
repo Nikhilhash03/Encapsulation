@@ -23,6 +23,10 @@ namespace Encapsulation.Properties
             {
                 balance -= amount;
             }
+            else
+            {
+                Console.WriteLine("Enter Correct Pin Number");
+            }
         }
         public double getbalance()
         {
@@ -33,9 +37,12 @@ namespace Encapsulation.Properties
     {
         static void Main(string[] args)
         {
+            
+            int pin =int.Parse(Console.ReadLine());
             Account acc = new Account();
             acc.deposit(5000);
-            acc.withdraw(2000,2001);
+            Console.WriteLine("Enter the Pin");
+            acc.withdraw(2000,pin);
 
             Console.WriteLine("Balance " + acc.getbalance());
         }
